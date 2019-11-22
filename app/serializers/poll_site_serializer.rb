@@ -1,6 +1,6 @@
 class PollSiteSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :site_name, :latitude, :longitude, :site_number, :street_number, :street_name,
+  attributes :id, :site_name, :latitude, :longitude, :site_number, :street_number, :street_name,
     :borough, :zip_code, :community_board, :council_district, :handicap_entrance
     
   has_many :messages
