@@ -24,4 +24,17 @@ sitesarray.each do |poll_site|
       handicap_entrance: poll_site['handicap_entrance'])
   end
 
+  lisa = User.create(name: "Lisa", email: "larochelle.lisa@gmail.com", password_digest: "lala")
+
+
+  rides = Channel.create(name: "Rides")
+  election_day = Channel.create(name: "Election Day")
+  general = Channel.create(name: "General")
+
+  mp1c1 = Message.create(content: "Hi", user_id: 1, poll_site_id: 1, channel_id: 1)
+  mp2cs = Message.create(content: "Hi Poll Site 2, Channel 2", user_id: 1, poll_site_id: 2, channel_id: 2)
+  mp3c2 = Message.create(content: "Hi Poll Site 3, Channel 2", user_id: 1, poll_site_id: 3, channel_id: 2)
+  mp1c3 = Message.create(content: "Hi Poll Site 2, Channel 2", user_id: 1, poll_site_id: 1, channel_id: 3)
+
+
   puts 'SEEDED 🌱'
