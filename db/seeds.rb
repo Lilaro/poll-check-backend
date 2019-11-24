@@ -24,7 +24,7 @@ sitesarray.each do |poll_site|
       handicap_entrance: poll_site['handicap_entrance'])
   end
 
-  lisa = User.create(name: "Lisa", email: "larochelle.lisa@gmail.com", password_digest: "lala")
+  lisa = User.create(name: "Lisa", email: "larochelle.lisa@gmail.com", password: "lala")
 
 
   rides = Channel.create(name: "Rides")

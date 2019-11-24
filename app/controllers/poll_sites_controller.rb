@@ -26,7 +26,7 @@ class PollSitesController < ApplicationController
 
   # PATCH/PUT /poll_sites/1
   def update
-    if @poll_site.update(poll_site_params)
+    if @poll_site.find(poll_site_params)
       render json: @poll_site
     else
       render json: @poll_site.errors, status: :unprocessable_entity
