@@ -46,6 +46,6 @@ class PollSitesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def poll_site_params
-      params.require(:poll_site).permit(:name, :latitude, :longitude, :site_number)
+      params.require(:poll_site).permit(:name, :latitude, :longitude, :borough, :community_board, :council_district, :site_number, :zip_code, :city, :voter_entrance)
     end
 end

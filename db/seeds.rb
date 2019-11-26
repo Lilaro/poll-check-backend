@@ -5,23 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+PollSite.destroy_all
 
 sites = RestClient.get("https://data.cityofnewyork.us/resource/mifw-tguq.json")
 sitesarray = JSON.parse(sites)
 
 sitesarray.each do |poll_site|
-   byebug
+   # byebug
    PollSite.create(
       site_name: poll_site['site_name'], 
       latitude: poll_site['latitude'], 
-      longitude: poll_site['longtitude'],
+      longitude: poll_site['longitude'],
       site_number: poll_site['site_number'],
       street_number: poll_site['street_number'],
       street_name: poll_site['street_name'],
+      city: poll_site['city'],
       borough: poll_site['borough'],
       zip_code: poll_site['zip_code'],
       community_board: poll_site['community_board'],
       council_district: poll_site['council_district'],
+      voter_entrance: poll_site['voter_entrance'],
       handicap_entrance: poll_site['handicap_entrance'])
   end
 
