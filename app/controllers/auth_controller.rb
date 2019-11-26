@@ -7,7 +7,7 @@ class AuthController < ApplicationController
 
         if is_authenticated
             generated_token = create_token(user.id)
-            render json: {token: generated_token, user_id: user.id}
+            render json: {token: generated_token, user: user}
         else
             render json: {errors: ["Invalid email address or password"]}, status: 422
         end

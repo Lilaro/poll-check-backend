@@ -10,6 +10,7 @@ sites = RestClient.get("https://data.cityofnewyork.us/resource/mifw-tguq.json")
 sitesarray = JSON.parse(sites)
 
 sitesarray.each do |poll_site|
+   byebug
    PollSite.create(
       site_name: poll_site['site_name'], 
       latitude: poll_site['latitude'], 
@@ -18,7 +19,7 @@ sitesarray.each do |poll_site|
       street_number: poll_site['street_number'],
       street_name: poll_site['street_name'],
       borough: poll_site['borough'],
-      zip_code: poll_site['zipcode'],
+      zip_code: poll_site['zip_code'],
       community_board: poll_site['community_board'],
       council_district: poll_site['council_district'],
       handicap_entrance: poll_site['handicap_entrance'])
