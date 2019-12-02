@@ -46,6 +46,6 @@ class ChannelsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def channel_params
-      params.require(:channel).permit(:type)
+      params.permit(:type)
     end
 end
