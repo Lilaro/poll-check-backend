@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
 
-    render json: @messages
+    render json: @messages, include: :user
   end
 
   # GET /messages/1
@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
+    # byebug
     @message = Message.new(message_params)
 
     if @message.save

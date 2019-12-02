@@ -5,7 +5,7 @@ class PollSitesController < ApplicationController
   def index
     @poll_sites = PollSite.all
 
-    render json: @poll_sites
+    render json: @poll_sites, include: :messages
   end
 
   # GET /poll_sites/1
