@@ -39,11 +39,11 @@ sites_array.each do |poll_site|
   election_day = Channel.create(name: "Election Day")
   general = Channel.create(name: "General")
   
-  m1 = Message.create(content: "Hi", user_id: 1, poll_site_id: 1, channel_id: 3)
-  m2 = Message.create(content: "Hi Poll Site 1, Channel 3", user_id: 1, poll_site_id: 1, channel_id: 3)
-  m3 = Message.create(content: "Hey Poll Site 1, Channel 3", user_id: 2, poll_site_id: 1, channel_id: 3)
-  m4 = Message.create(content: "Hello Poll Site 1, Channel 3", user_id: 3, poll_site_id: 1, channel_id: 3)
-  m5 = Message.create(content: "Oh hey Site 2 Channel 2", user_id: 1, poll_site_id: 2, channel_id: 3)
+  # m1 = Message.create(content: "Hi", user_id: 1, poll_site_id: 1, channel_id: 3)
+  # m2 = Message.create(content: "Hi Poll Site 1, Channel 3", user_id: 1, poll_site_id: 1, channel_id: 3)
+  # m3 = Message.create(content: "Hey Poll Site 1, Channel 3", user_id: 2, poll_site_id: 1, channel_id: 3)
+  # m4 = Message.create(content: "Hello Poll Site 1, Channel 3", user_id: 3, poll_site_id: 1, channel_id: 3)
+  # m5 = Message.create(content: "Oh hey Site 2 Channel 2", user_id: 1, poll_site_id: 2, channel_id: 3)
   
 #   site1 = PollSite.create(
 #    id: 8001,
