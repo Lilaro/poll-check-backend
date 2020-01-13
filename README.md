@@ -28,4 +28,5 @@ A React.js and Ruby on Rails web application for communication about NYC polling
 * Run rails `db:migrate`  
 * Run rails `db:seed`  
 * Run `rails s` to run the server on `http://localhost:3000`  
+* Install and run the Poll Check frontend: [Poll Check Frontend Repo](https://github.com/Lilaro/poll-check-frontend)
 
