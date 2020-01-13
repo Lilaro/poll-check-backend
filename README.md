@@ -1,5 +1,6 @@
 # Poll Check
-A React.js and Ruby on Rails web application for communication about NYC polling sites, election day ride shares and voting problems
+A React.js and Ruby on Rails web application for communication about NYC polling sites, election day ride shares and voting problems  
+Built by [Lisa LaRochelle](https://github.com/Lilaro)
 
 
 ## Technologies and Frameworks Used
